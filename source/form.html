@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <nav class="main-nav">
+        <a class="logo-pic"><img src="#" alt="logo-pic" width="33" height="37"></a>
+        <a class="logo-text"><img src="#" alt="logo-text" width="101" height="18"></a>
+        <button class="main-nav__toogle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+          <ul class="main-nav__list site-list">
+            <li class="cite-list__item cite-list__item--active">
+              <a href="#">Главная</a>
+            </li>
+            <li class="cite-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="cite-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="order-form">
+        <h1 class="order-form__head">Подбор программы</h1>
+        <p class="order-form__underhead-text">
+          Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
+        <form class="order-form__form order-form" action="https://echo.htmlacademy.ru" name="Order-form" method="POST">
+          <div class="order-form__base-info">
+            <p>
+              <label for="name">Имя:*</label>
+              <input id="name" name="name" type="text" placeholder="Барсик" required>
+            </p>
+            <p>
+              <label for="weight">Вес (кг):*</label>
+              <input id="weight" name="weight" type="text" placeholder="7" required>
+            </p>
+            <p>
+              <label for="age">Возраст (лет):</label>
+              <input id="age" name="age" type="text" placeholder="7">
+            </p>
+          </div>
+
+          <div class="order-form__program-type">
+              <p><label><input type="radio" name="program-type" value="light">Похудение</label></p>
+              <p><label><input type="radio" name="program-type" value="weight">Набор массы</label></p>
+              <p><label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label></p>
+          </div>
+
+          <div class="order-form__contacts contacts">
+            <h3 class="contacts__head">Контактные данные
+              (владельца кота)</h3>
+            <div class="contacts__form">
+              <p>
+                <label for="email">E-mail:*</label>
+                <input id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
+              </p>
+              <p>
+                <label for="phone">E-mail:*</label>
+                <input id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+              </p>
+            </div>
+          </div>
+
+          <div class="order-form__comment comment">
+            <h3 class="comment">Комментарий</h3>
+            <textarea  name="comment" cols="50" rows="10">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА
+            </textarea>
+          </div>
+
+          <div class="order-form__additional additional-form">
+            <h3 class="additional-form__head">Дополнительно</h3>
+            <p><label><input type="checkbox" name="add" value="sweetener">Сахарозаменитель</label></p>
+            <p><label><input type="checkbox" name="add" value="water">Питьевая вода</label></p>
+            <p><label><input type="checkbox" name="add" value="milk">Молоко</label></p>
+            <p><label><input type="checkbox" name="add" value="vitamins">Витамины</label></p>
+          </div>
+
+          <button type="submit" class="order-form__form-button">Отправить заявку</button>
+          <p class="order-form__notice">* — Обязательные поля</p>
+        </form>
+      </section>
+
+      <section class="partnership">
+        <h2 class="partnership__head">приглашаем к сотрудничеству дилеров!</h2>
+        <address class="partnership__adress">ул. Большая
+          Конюшенная, д. 19/8
+          Санкт-Петербург</address>
+          <img class="partnership__map" src="#" alt="map" width="320" height="362">
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="logo-text"><img src="#" alt="logo-text" width="128" height="24"></a>
+      </div>
+      <ul class="page-footer__social-buttons">
+        <li class="page-footer__vkontakte">
+          <a href="#"></a>
+        </li>
+        <li class="page-footer__instagram">
+          <a href="#"></a>
+        </li>
+        <li class="page-footer__facebook">
+          <a href="#"></a>
+        </li>
+      </ul>
+      <ul class="page-footer__copyright">
+        <li>
+          <a class="page-footer__copyright-text">HTML Academy</a>
+        </li>
+        <li>
+          <a class="page-footer__copyright-logo"></a>
+        </li>
+      </ul>
+    </footer>
+
+  </body>
+</html>
