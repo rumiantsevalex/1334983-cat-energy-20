@@ -6,20 +6,22 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="logo-pic"><img src="#" alt="logo-pic" width="33" height="37"></a>
-        <a class="logo-text"><img src="#" alt="logo-text" width="101" height="18"></a>
+      <nav class="page-header__nav main-nav">
+        <a class="logo">
+          <img class="logo__pic" src="#" alt="logo-pic" width="33" height="37">
+          <img class="logo__text" src="#" alt="logo-text" width="101" height="18">
+        </a>
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
           <ul class="main-nav__list site-list">
-            <li class="cite-list__item cite-list__item--active">
+            <li class="site-list__item site-list__item--active">
               <a href="#">Главная</a>
             </li>
-            <li class="cite-list__item">
+            <li class="site-list__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="cite-list__item">
+            <li class="site-list__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -33,54 +35,69 @@
           Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
         <form class="order-form__form order-form" action="https://echo.htmlacademy.ru" name="Order-form" method="POST">
-          <div class="order-form__base-info">
-            <p>
+          <ul class="order-form__base-info">
+            <li>
               <label for="name">Имя:*</label>
               <input id="name" name="name" type="text" placeholder="Барсик" required>
-            </p>
-            <p>
+            </li>
+            <li>
               <label for="weight">Вес (кг):*</label>
               <input id="weight" name="weight" type="text" placeholder="7" required>
-            </p>
-            <p>
+            </li>
+            <li>
               <label for="age">Возраст (лет):</label>
               <input id="age" name="age" type="text" placeholder="7">
-            </p>
-          </div>
+            </li>
+          </ul>
 
-          <div class="order-form__program-type">
-              <p><label><input type="radio" name="program-type" value="light">Похудение</label></p>
-              <p><label><input type="radio" name="program-type" value="weight">Набор массы</label></p>
-              <p><label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label></p>
-          </div>
+          <ul class="order-form__program-type">
+              <li>
+                <label><input type="radio" name="program-type" value="light">Похудение</label>
+              </li>
+              <li>
+                <label><input type="radio" name="program-type" value="weight">Набор массы</label>
+              </li>
+              <li>
+                <label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+          </ul>
 
           <div class="order-form__contacts contacts">
             <h3 class="contacts__head">Контактные данные
               (владельца кота)</h3>
-            <div class="contacts__form">
-              <p>
+            <ul class="contacts__form">
+              <li>
                 <label for="email">E-mail:*</label>
                 <input id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
-              </p>
-              <p>
+              </li>
+              <li>
                 <label for="phone">E-mail:*</label>
                 <input id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
 
           <div class="order-form__comment comment">
             <h3 class="comment">Комментарий</h3>
-            <textarea  name="comment" cols="50" rows="10">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА
-            </textarea>
+            <textarea  name="comment" cols="50" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
 
           <div class="order-form__additional additional-form">
             <h3 class="additional-form__head">Дополнительно</h3>
-            <p><label><input type="checkbox" name="add" value="sweetener">Сахарозаменитель</label></p>
-            <p><label><input type="checkbox" name="add" value="water">Питьевая вода</label></p>
-            <p><label><input type="checkbox" name="add" value="milk">Молоко</label></p>
-            <p><label><input type="checkbox" name="add" value="vitamins">Витамины</label></p>
+            <ul class="additional-form__checkbox-list">
+              <li>
+                <label><input type="checkbox" name="add" value="sweetener">Сахарозаменитель</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="add" value="water">Питьевая вода</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="add" value="milk">Молоко</label>
+              </li>
+              <li>
+                <label><input type="checkbox" name="add" value="vitamins">Витамины</label>
+              </li>
+            </ul>
           </div>
 
           <button type="submit" class="order-form__form-button">Отправить заявку</button>
@@ -100,25 +117,27 @@
 
     <footer class="page-footer">
       <div class="page-footer__logo">
-        <a class="logo-text"><img src="#" alt="logo-text" width="128" height="24"></a>
+        <a class="logo">
+          <img src="#" class="logo__text" alt="logo-text" width="128" height="24">
+        </a>
       </div>
-      <ul class="page-footer__social-buttons">
-        <li class="page-footer__vkontakte">
+      <ul class="page-footer__social-buttons social-buttons">
+        <li class="social-buttons__vkontakte">
           <a href="#"></a>
         </li>
-        <li class="page-footer__instagram">
+        <li class="social-buttons__instagram">
           <a href="#"></a>
         </li>
-        <li class="page-footer__facebook">
+        <li class="social-buttons__facebook">
           <a href="#"></a>
         </li>
       </ul>
-      <ul class="page-footer__copyright">
+      <ul class="page-footer__copyright copyright">
         <li>
-          <a class="page-footer__copyright-text">HTML Academy</a>
+          <a class="copyright__text">HTML Academy</a>
         </li>
         <li>
-          <a class="page-footer__copyright-logo"></a>
+          <a class="copyright__logo"></a>
         </li>
       </ul>
     </footer>

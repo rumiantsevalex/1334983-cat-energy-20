@@ -6,20 +6,22 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="logo-pic"><img src="#" alt="logo-pic" width="33" height="37"></a>
-        <a class="logo-text"><img src="#" alt="logo-text" width="101" height="18"></a>
+      <nav class="page-header__nav main-nav">
+        <a class="logo">
+          <img class="logo__pic" src="#" alt="logo-pic" width="33" height="37">
+          <img class="logo__text" src="#" alt="logo-text" width="101" height="18">
+        </a>
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
           <ul class="main-nav__list site-list">
-            <li class="cite-list__item cite-list__item--active">
+            <li class="site-list__item site-list__item--active">
               <a href="#">Главная</a>
             </li>
-            <li class="cite-list__item">
+            <li class="site-list__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="cite-list__item">
+            <li class="site-list__item">
               <a href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -33,7 +35,7 @@
         <ul class="product-catalog__list">
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>500 г</td>
@@ -49,7 +51,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 100 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>1000 г</td>
@@ -65,7 +67,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>500 г</td>
@@ -81,7 +83,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>1000 г</td>
@@ -97,7 +99,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>500 г</td>
@@ -113,7 +115,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>1000 г</td>
@@ -129,7 +131,7 @@
           </li>
           <li class="product-catalog__item">
             <img src="#" width="140" height="112" alt="Cat Energy PRO 500 г">
-            <p>Cat Energy PRO 500 г</p>
+            <h3 class="product-catalog__name">Cat Energy PRO 500 г</h3>
             <table class="product-catalog__product-stats">
               <tr>
                 <td>Объем</td><td>500 г</td>
@@ -143,57 +145,56 @@
             </table>
             <a class="product-catalog__order-button">Заказать</a>
           </li>
+          <li class="product-catalog__item more-items">
+            <h3 class="more-items__head">
+              Показать еще 100500 товаров
+            </h3>
+            <p class="more-items__text">На самом деле вкусов гораздо больше!</p>
+            <a class="more-items__button">Показать все</a>
+          </li>
         </ul>
-
-        <article class="product-catalog__more-items more-items">
-          <h3 class="more-items__head">
-            Показать еще 100500 товаров
-          </h3>
-          <p class="more-text">На самом деле вкусов гораздо больше!</p>
-          <a class="more-items__button">Показать все</a>
-        </article>
       </section>
 
       <section class="additional-products">
         <h2 class="additional-products__head">Дополнительные товары</h2>
         <ul class="additional-products__list">
           <li class="additional-products__item">
-            <p class="additional-products__name">Сахарозаменитель</p>
+            <h3 class="additional-products__name">Сахарозаменитель</h3>
             <table>
-              <tr>
-                <td>1 упаковка (100 г)</td>
-                <td>200 Р.</td>
-              </tr>
+              <div>
+                <p>1 упаковка (100 г)</p>
+                <p>200 Р.</p>
+              </div>
             </table>
             <a class="additional-products__order-button">Заказать</a>
           </li>
           <li class="additional-products__item">
-            <p class="additional-products__name">Питьевая вода</p>
+            <h3 class="additional-products__name">Питьевая вода</h3>
             <table>
-              <tr>
-                <td>5 литров</td>
-                <td>50 Р.</td>
-              </tr>
+              <div>
+                <p>5 литров</p>
+                <p>50 Р.</p>
+              </div>
             </table>
             <a class="additional-products__order-button">Заказать</a>
           </li>
           <li class="additional-products__item">
-            <p class="additional-products__name">Молоко</p>
+            <h3 class="additional-products__name">Молоко</h3>
             <table>
-              <tr>
-                <td>1 литр</td>
-                <td>100 Р.</td>
-              </tr>
+              <div>
+                <p>1 литр</p>
+                <p>100 Р.</p>
+              </div>
             </table>
             <a class="additional-products__order-button">Заказать</a>
           </li>
           <li class="additional-products__item">
-            <p class="additional-products__name">Витамины</p>
+            <h3 class="additional-products__name">Витамины</h3>
             <table>
-              <tr>
-                <td>1 упаковка (30 г)</td>
-                <td>300 Р.</td>
-              </tr>
+              <div>
+                <p>1 упаковка (30 г)</p>
+                <p>300 Р.</p>
+              </div>
             </table>
             <a class="additional-products__order-button">Заказать</a>
           </li>
@@ -218,25 +219,27 @@
 
     <footer class="page-footer">
       <div class="page-footer__logo">
-        <a class="logo-text"><img src="#" alt="logo-text" width="128" height="24"></a>
+        <a class="logo">
+          <img src="#" class="logo__text" alt="logo-text" width="128" height="24">
+        </a>
       </div>
-      <ul class="page-footer__social-buttons">
-        <li class="page-footer__vkontakte">
+      <ul class="page-footer__social-buttons social-buttons">
+        <li class="social-buttons__vkontakte">
           <a href="#"></a>
         </li>
-        <li class="page-footer__instagram">
+        <li class="social-buttons__instagram">
           <a href="#"></a>
         </li>
-        <li class="page-footer__facebook">
+        <li class="social-buttons__facebook">
           <a href="#"></a>
         </li>
       </ul>
-      <ul class="page-footer__copyright">
+      <ul class="page-footer__copyright copyright">
         <li>
-          <a class="page-footer__copyright-text">HTML Academy</a>
+          <a class="copyright__text">HTML Academy</a>
         </li>
         <li>
-          <a class="page-footer__copyright-logo"></a>
+          <a class="copyright__logo"></a>
         </li>
       </ul>
     </footer>
