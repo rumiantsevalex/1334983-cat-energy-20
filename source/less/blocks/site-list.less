@@ -1,3 +1,46 @@
 .site-list {
-  display: none;
+  .ul-base-style;
+
+  a {
+    text-decoration: none;
+    color: black;
+    .oswald;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+
+    @media (min-width: @tablet-width) {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  li {
+    margin-top: 22px;
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 35px;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+}
+
+.white a {
+  @media (min-width: @tablet-width) {
+    color: white;
+  }
 }

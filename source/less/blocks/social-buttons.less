@@ -1,11 +1,26 @@
+.social-buttons {
+  .ul-base-style;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 52px;
+  margin-bottom: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 132px;
+  }
+}
+
 .social-buttons__vkontakte {
+  display: block;
   background-image: url("../img/icon-vk.svg");
   background-repeat: no-repeat;
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 22px;
+  margin-top: 3px;
 }
 
 .social-buttons__instagram {
+  display: block;
   background-image: url("../img/icon-insta.svg");
   background-repeat: no-repeat;
   width: 23px;
@@ -13,8 +28,9 @@
 }
 
 .social-buttons__facebook {
+  display: block;
   background-image: url("../img/icon-fb.svg");
   background-repeat: no-repeat;
-  width: 23px;
+  width: 28px;
   height: 23px;
 }

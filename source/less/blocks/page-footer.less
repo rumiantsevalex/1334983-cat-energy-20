@@ -1,11 +1,21 @@
 .page-footer {
   background-color: var(--basic-grey);
   min-height: 236px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 150px;
+  }
 }
 
 .page-footer__wrapper {
   .main-wrapper;
   padding-top: 39px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .page-footer__logo {

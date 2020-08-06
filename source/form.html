@@ -2,30 +2,33 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="page-header">
       <nav class="page-header__nav main-nav">
-        <a class="logo">
-          <img class="logo__header" src="img/logo-mobile.svg" alt="logo-pic" width="191" height="40">
-        </a>
-        <button class="main-nav__toogle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
+        <div class="main-nav__top">
+          <a class="logo">
+            <img class="logo__header" src="img/logo-mobile.svg" alt="logo-pic" width="191" height="40">
+          </a>
+          <button class="main-nav__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -33,89 +36,95 @@
       <section class="order-form">
         <div class="order-form__wrapper">
           <h1 class="order-form__head">Подбор программы</h1>
-          <p class="order-form__underhead-text">
-            Заполните анкету, и мы подберем
-            программу питания для вашего кота</p>
-          <form class="order-form__form order-info" action="https://echo.htmlacademy.ru" name="order-form" method="POST">
-            <ul class="order-info__base-info">
-              <li>
-                <label for="name">Имя:*</label>
-                <input id="name" name="name" type="text" placeholder="Барсик" required>
-              </li>
-              <li>
-                <label for="weight">Вес (кг):*</label>
-                <input id="weight" name="weight" type="text" placeholder="7" required>
-              </li>
-              <li>
-                <label for="age">Возраст (лет):</label>
-                <input id="age" name="age" type="text" placeholder="7">
-              </li>
-            </ul>
+          <div class="order-form__form-wrapper">
+            <p class="order-form__underhead-text">
+              Заполните анкету, и мы подберем
+              программу питания для вашего кота</p>
+            <form class="order-form__base-info" action="https://echo.htmlacademy.ru" name="order-form" method="POST">
+              <div class="order-form__info-programm-wrapper">
+                <ul class="order-form__info-list">
+                  <li>
+                    <label for="name">Имя:*</label>
+                    <input id="name" name="name" type="text" placeholder="Барсик" required>
+                  </li>
+                  <li>
+                    <label for="weight">Вес (кг):*</label>
+                    <input id="weight" name="weight" type="text" placeholder="7" required>
+                  </li>
+                  <li>
+                    <label for="age">Возраст (лет):</label>
+                    <input id="age" name="age" type="text" placeholder="7">
+                  </li>
+                </ul>
 
-            <ul class="order-form__program-type">
-                <li>
-                  <label><input type="radio" name="program-type" value="light">Похудение</label>
-                </li>
-                <li>
-                  <label><input type="radio" name="program-type" value="weight">Набор массы</label>
-                </li>
-                <li>
-                  <label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label>
-                </li>
-            </ul>
+                <ul class="order-form__program-type">
+                    <li>
+                      <label><input type="radio" name="program-type" value="light">Похудение</label>
+                    </li>
+                    <li>
+                      <label><input type="radio" name="program-type" value="weight">Набор массы</label>
+                    </li>
+                    <li>
+                      <label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label>
+                    </li>
+                </ul>
+              </div>
 
-            <div class="order-form__contacts contacts">
-              <h3 class="contacts__head">Контактные данные
-                (владельца кота)</h3>
-              <ul class="contacts__form">
-                <li>
-                  <label for="email">E-mail:*</label>
-                  <input id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
-                </li>
-                <li>
-                  <label for="phone">Телефон:*</label>
-                  <input id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
-                </li>
-              </ul>
-            </div>
+              <div class="order-form__contacts">
+                <h3 class="order-form__contacts-head">Контактные данные
+                  (владельца кота)</h3>
+                <ul class="order-form__contacts-form">
+                  <li>
+                    <label for="email">E-mail:*</label>
+                    <input id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
+                  </li>
+                  <li>
+                    <label for="phone">Телефон:*</label>
+                    <input id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
+                  </li>
+                </ul>
+              </div>
 
-            <div class="order-form__comment comment">
-              <h3 class="comment__head">Комментарий</h3>
-              <textarea  class="comment-text"  name="comment" cols="50" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
+              <div class="order-form__comment">
+                <h3 class="order-form__comment-head">Комментарий</h3>
+                <textarea  class="order-form__comment-text"  name="comment" cols="50" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
 
-            <div class="order-form__additional additional-form">
-              <h3 class="additional-form__head">Дополнительно</h3>
-              <ul class="additional-form__checkbox-list">
-                <li>
-                  <label><input type="checkbox" name="add" value="sweetener" checked>Сахарозаменитель</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" name="add" value="water">Питьевая вода</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" name="add" value="milk">Молоко</label>
-                </li>
-                <li>
-                  <label><input type="checkbox" name="add" value="vitamins">Витамины</label>
-                </li>
-              </ul>
-            </div>
+              <div class="order-form__additional">
+                <h3 class="order-form__additional-head">Дополнительно</h3>
+                <ul class="order-form__additional-list">
+                  <li>
+                    <label><input type="checkbox" name="add" value="sweetener" checked>Сахарозаменитель</label>
+                  </li>
+                  <li>
+                    <label><input type="checkbox" name="add" value="water">Питьевая вода</label>
+                  </li>
+                  <li>
+                    <label><input type="checkbox" name="add" value="milk">Молоко</label>
+                  </li>
+                  <li>
+                    <label><input type="checkbox" name="add" value="vitamins">Витамины</label>
+                  </li>
+                </ul>
+              </div>
 
-            <button type="submit" class="order-form__form-button">Отправить заявку</button>
-            <p class="order-form__notice">* — Обязательные поля</p>
-          </form>
+              <div class="order-form__button-div">
+                <button type="submit" class="order-form__form-button">Отправить заявку</button>
+                <p class="order-form__notice">* — Обязательные поля</p>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
-        <section class="partnership">
-          <div class="partnership__wrapper">
-            <h2 class="partnership__head">Приглашаем к сотрудничеству дилеров!</h2>
+      <section class="partnership">
+        <div class="partnership__wrapper">
+            <h2 class="partnership__head">Приглашаем <br>к сотрудничеству дилеров!</h2>
             <address class="partnership__adress">ул. Большая
               Конюшенная, д. 19/8
               Санкт-Петербург</address>
-            <img class="partnership__map" src="img/bg-map-mobile@1x.png" alt="map" width="320" height="362">
-          </div>
+        </div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae52d17c07586e1c40c379d06efddfe7b84391496b3c8b74c21715c545acb77e3&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
 
     </main>
@@ -140,10 +149,10 @@
         </ul>
         <ul class="page-footer__copyright copyright">
           <li class="copyright__text">
-            <a href="#">HTML Academy</a>
+            <a class="copyright__link" href="#">HTML Academy</a>
           </li>
-          <li class="copyright__logo">
-            <a href="#"></a>
+          <li>
+            <a class="copyright__logo" href="#"></a>
           </li>
         </ul>
       </div>
