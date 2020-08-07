@@ -1,9 +1,23 @@
-.copyright__text {
-  .arial;
-  color: var(--basic-grey-font);
+.copyright {
+  .ul-base-style;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 164px;
+  }
 }
 
+.copyright__link {
+  .arial;
+  color: var(--basic-grey-font);
+  font-style: normal;
+  text-decoration: none;
+}
+
+
 .copyright__logo {
+  display: block;
   width: 27px;
   height: 34px;
   background-image: url("../img/htmlacademy.svg");

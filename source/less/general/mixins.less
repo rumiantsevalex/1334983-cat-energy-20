@@ -1,7 +1,18 @@
-
 .main-wrapper {
-  margin-left: 20px;
-  margin-right: 20px;
+  @media (max-width: @mobile-width-only) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
 }
 
 .base-button {
@@ -17,7 +28,15 @@
   height: 40px;
   text-decoration: none;
   border: none;
-  width: 100%;
+  width: 244px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 248px;
+  }
 }
 
 .oswald {
@@ -26,4 +45,23 @@
 
 .arial {
   font-family: "Arial", sans-serif;
+}
+
+.ul-base-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
