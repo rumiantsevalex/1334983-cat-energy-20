@@ -1,3 +1,7 @@
+.discription {
+  .base-wrapper;
+}
+
 .discription__wrapper {
   .main-wrapper;
 }
@@ -11,19 +15,19 @@
 .discription__list {
   .ul-base-style;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     display: flex;
   }
 }
 
 .discription__item {
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     width: 315px;
     min-height: 335px;
     padding-top: 150px;
@@ -39,7 +43,7 @@
   position: relative;
   min-height: 60px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     margin-left: 0;
     font-size: 16px;
     line-height: 24px;
@@ -57,7 +61,7 @@
     left: -80px;
     background-position: center;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet-width {
       width: 80px;
       height: 80px;
       left: 0;
@@ -66,14 +70,14 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media @tablet-width {
   .discription__text {
     &-1 {
       &::after {
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../../img/1.png");
+        background-image: url("../img/1.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -88,7 +92,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../../img/2.png");
+        background-image: url("../img/2.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -103,7 +107,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../../img/3.png");
+        background-image: url("../img/3.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -118,7 +122,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../../img/4.png");
+        background-image: url("../img/4.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -132,24 +136,24 @@
 
 .discription__leaf {
   &::before {
-    background-image: url("../../img/advantage-leaf@1x.png");
+    background-image: url("../img/advantage-leaf@1x.png");
   }
 }
 
 .discription__powder {
   &::before {
-    background-image: url("../../img/advantage-powder@1x.png");
+    background-image: url("../img/advantage-powder@1x.png");
   }
 }
 
 .discription__dining {
   &::before {
-    background-image: url("../../img/advantage-dining@1x.png");
+    background-image: url("../img/advantage-dining@1x.png");
   }
 }
 
 .discription__clock {
   &::before {
-    background-image: url("../../img/advantage-clock@1x.png");
+    background-image: url("../img/advantage-clock@1x.png");
   }
 }

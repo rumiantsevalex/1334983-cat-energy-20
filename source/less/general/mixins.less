@@ -1,17 +1,33 @@
 .main-wrapper {
-  @media (max-width: @mobile-width-only) {
+  @media @mobile-width-only {
     margin-left: 20px;
     margin-right: 20px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     margin-left: 30px;
     margin-right: 30px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     margin-left: 110px;
     margin-right: 110px;
+  }
+}
+
+.base-wrapper {
+  margin: 0 auto;
+
+  @media @mobile-width-only {
+    max-width: 320px;
+  }
+
+  @media @tablet-width {
+    max-width: 768px;
+  }
+
+  @media @desktop-width {
+    max-width: 1440px;
   }
 }
 
@@ -30,12 +46,20 @@
   border: none;
   width: 244px;
 
-  @media (max-width: @mobile-width-only) {
+  @media @mobile-width-only {
     width: 100%;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     width: 248px;
+  }
+
+  &:hover {
+    background-color: var(--basic-green-2);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 

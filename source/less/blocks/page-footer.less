@@ -2,19 +2,24 @@
   background-color: var(--basic-grey);
   min-height: 236px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     min-height: 150px;
   }
 }
 
 .page-footer__wrapper {
-  .main-wrapper;
+  .base-wrapper;
   padding-top: 39px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media @desktop-width {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 

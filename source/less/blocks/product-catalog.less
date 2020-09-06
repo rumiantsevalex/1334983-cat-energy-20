@@ -1,3 +1,7 @@
+.product-catalog {
+  .base-wrapper;
+}
+
 .product-catalog__wrapper {
   .main-wrapper;
 }
@@ -7,12 +11,12 @@
   font-size: 36px;
   line-height: 36px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     font-size: 60px;
     line-height: 60px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     margin-top: 100px;
   }
 }
@@ -20,7 +24,7 @@
 .product-catalog__list {
   .ul-base-style;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: grid;
     grid-template-columns: 324px 324px;
     grid-template-rows: 511px 511px 511px 511px;
@@ -28,7 +32,7 @@
     justify-content: center;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     grid-template-columns: 245px 245px 245px 245px;
     grid-template-rows: 511px 511px;
     row-gap: 63px;
@@ -37,7 +41,7 @@
 }
 
 .product-catalog__item {
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -47,11 +51,11 @@
 }
 
 .product-catalog__item-wrapper {
-  @media (max-width: @mobile-width-only) {
+  @media @mobile-width-only {
     display: flex;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: flex;
     flex-direction: column;
     width: 251px;
@@ -62,7 +66,7 @@
 }
 
 .product-catalog__name-and-stats {
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -78,7 +82,7 @@
   .oswald;
   width: 76px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     font-size: 20px;
     line-height: 24px;
     width: 155px;
@@ -94,7 +98,7 @@
   font-size: 12px;
   line-height: 16px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     width: 100%;
     font-size: 16px;
     line-height: 16px;
@@ -106,7 +110,7 @@
   justify-content: space-between;
   width: 140px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     margin-right: -10px;
     width: 251px;
     margin-bottom: 14px;

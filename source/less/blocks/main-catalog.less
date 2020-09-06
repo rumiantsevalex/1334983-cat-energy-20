@@ -1,3 +1,7 @@
+.main-catalog {
+  .base-wrapper;
+}
+
 .main-catalog__wrapper {
   .main-wrapper;
 }
@@ -5,7 +9,7 @@
 .main-catalog__list {
   .ul-base-style;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     display: flex;
     justify-content: space-between;
   }
@@ -19,12 +23,12 @@
   margin-bottom: 20px;
   min-height: 266px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     padding-left: 52px;
     padding-bottom: 55px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     margin-top: 82px;
     width: 570px;
   }
@@ -45,13 +49,13 @@
   .oswald;
   position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     font-size: 36px;
     line-height: 36px;
     margin-left: 0;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     margin-left: 165px;
     margin-bottom: 57px;
   }
@@ -63,8 +67,8 @@
     content: "";
     position: absolute;
 
-    @media (max-width: @mobile-width-only) {
-      background-image: url("../../img/cat_back-stand-mobile.png");
+    @media @mobile-width-only {
+      background-image: url("../img/cat_back-stand-mobile.png");
       background-repeat: no-repeat;
       width: 50px;
       height: 53px;
@@ -72,8 +76,8 @@
       left: -70px;
     }
 
-    @media (min-width: @tablet-width) {
-      background-image: url("../../img/cat_back-stand-tablet.png");
+    @media @tablet-width {
+      background-image: url("../img/cat_back-stand-tablet.png");
       background-repeat: no-repeat;
       width: 200px;
       height: 211px;
@@ -81,8 +85,8 @@
       left: 400px;
     }
 
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/cat_back-stand-tablet.png");
+    @media @desktop-width {
+      background-image: url("../img/cat_back-stand-tablet.png");
       background-repeat: no-repeat;
       background-size: contain;
       width: 100px;
@@ -99,8 +103,8 @@
     content: "";
     position: absolute;
 
-    @media (max-width: @mobile-width-only) {
-      background-image: url("../../img/cat_back-walk-mobile.png");
+    @media @mobile-width-only {
+      background-image: url("../img/cat_back-walk-mobile.png");
       background-repeat: no-repeat;
       width: 67px;
       height: 50px;
@@ -108,8 +112,8 @@
       left: -80px;
     }
 
-    @media (min-width: @tablet-width) {
-      background-image: url("../../img/cat_back-walk-tablet.png");
+    @media @tablet-width {
+      background-image: url("../img/cat_back-walk-tablet.png");
       background-repeat: no-repeat;
       width: 268px;
       height: 200px;
@@ -117,8 +121,8 @@
       left: 365px;
     }
 
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/cat_back-walk-tablet.png");
+    @media @desktop-width {
+      background-image: url("../img/cat_back-walk-tablet.png");
       background-repeat: no-repeat;
       background-size: contain;
       width: 134px;
@@ -135,13 +139,13 @@
   font-size: 14px;
   line-height: 18px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     width: 340px;
     font-size: 16px;
     line-height: 24px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     width: 100%;
     font-size: 16px;
     line-height: 24px;
@@ -161,11 +165,15 @@
     display: block;
     content: "";
     position: absolute;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     width: 32px;
     height: 10px;
     top: 5px;
     left: 100px;
   }
+}
+
+.main-catalog__link--pressed:active {
+  opacity: 30%;
 }

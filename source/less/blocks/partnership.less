@@ -1,24 +1,33 @@
 .partnership {
+  &--grey {
+    background-color: var(--basic-grey);
+  }
+}
+
+.partnership__desktop-wrapper {
   position: relative;
+  .base-wrapper;
 }
 
 .partnership__wrapper {
-  .main-wrapper;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 114px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     min-height: 201px;
+    padding-left: 41px;
+    padding-right: 41px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     width: 570px;
     height: 201px;
     position: absolute;
     top: 70px;
-    left: 20px;
+    left: 8%;
     z-index: 999;
     background-color: white;
     padding: 76px;
@@ -32,12 +41,12 @@
   .oswald;
   min-width: 140px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     font-size: 20px;
     line-height: 21px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     width: 163px;
   }
 }
@@ -49,7 +58,7 @@
   line-height: 20px;
   color: var(--basic-grey-font);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     font-size: 16px;
     line-height: 20px;
     width: 159px;

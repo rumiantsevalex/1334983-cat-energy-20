@@ -2,7 +2,7 @@
   padding-top: 11px;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,20 +10,20 @@
     margin-right: 30px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop-width {
     margin-left: 110px;
     margin-right: 110px;
   }
 }
 
 .main-nav__top {
-  @media (max-width: @mobile-width-only) {
+  @media @mobile-width-only {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: inline-block;
   }
 }
@@ -35,7 +35,7 @@
   background-color: transparent;
   border: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     .visually-hidden;
   }
 }

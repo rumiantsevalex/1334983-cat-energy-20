@@ -10,10 +10,15 @@
     line-height: 20px;
     font-weight: bold;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet-width {
       font-weight: normal;
       font-size: 18px;
       line-height: 24px;
+    }
+
+    @media @desktop-width {
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 
@@ -21,26 +26,44 @@
     margin-top: 22px;
     margin-bottom: 24px;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet-width {
       margin-left: 35px;
     }
   }
 
-  @media (max-width: @mobile-width-only) {
+  @media @mobile-width-only {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet-width {
     display: flex;
     justify-content: right;
     align-items: center;
   }
 }
 
-.white a {
-  @media (min-width: @tablet-width) {
+.site-list--white a {
+  @media @desktop-width {
     color: white;
+  }
+}
+
+.site-list__link--hover:hover {
+  opacity: 60%;
+}
+
+.site-list__link--pressed:active {
+  opacity: 30%;
+}
+
+.site-list__link--active {
+  border-bottom: 2px var(--basic-green) solid;
+}
+
+.site-list__link--white {
+  @media @desktop-width {
+    border-bottom: 2px white solid;
   }
 }

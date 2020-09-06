@@ -11,8 +11,8 @@
     <header class="page-header">
       <nav class="page-header__nav main-nav">
         <div class="main-nav__top">
-          <a class="logo">
-            <img class="logo__header" src="img/logo-mobile.svg" alt="logo-pic" width="191" height="40">
+          <a class="logo" href="index.html">
+            <img class="logo__header logo__header--hover logo__header--pressed" src="img/logo-mobile.svg" alt="logo-pic" width="191" height="40">
           </a>
           <button class="main-nav__toogle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -20,13 +20,13 @@
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a class="site-list__link site-list__link--hover site-list__link--pressed" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
+            <a class="site-list__link site-list__link--hover site-list__link--pressed" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
+            <a class="site-list__link site-list__link--hover site-list__link--pressed site-list__link--active" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -49,23 +49,26 @@
                   </li>
                   <li>
                     <label for="weight">Вес (кг):*</label>
-                    <input id="weight" name="weight" type="text" placeholder="7" required>
+                    <input id="weight" name="weight" type="text" placeholder="7" required pattern="\d [0-9]">
                   </li>
                   <li>
                     <label for="age">Возраст (лет):</label>
-                    <input id="age" name="age" type="text" placeholder="7">
+                    <input id="age" name="age" type="text" placeholder="7" pattern="\d [0-9]">
                   </li>
                 </ul>
 
                 <ul class="order-form__program-type">
-                    <li>
-                      <label><input type="radio" name="program-type" value="light">Похудение</label>
+                    <li class="order-form__program">
+                      <input class="order-form__program-input" id="pr-1" type="radio" name="program-type" value="light" checked>
+                      <label for="pr-1">Похудение</label>
                     </li>
-                    <li>
-                      <label><input type="radio" name="program-type" value="weight">Набор массы</label>
+                    <li class="order-form__program">
+                      <input class="order-form__program-input" id="pr-2" type="radio" name="program-type" value="weight">
+                      <label for="pr-2">Набор массы</label>
                     </li>
-                    <li>
-                      <label><input type="radio" name="program-type" value="advice">Не знаю (Нужен ваш совет)</label>
+                    <li class="order-form__program">
+                      <input class="order-form__program-input" id="pr-3" type="radio" name="program-type" value="advice">
+                      <label for="pr-3">Не знаю (Нужен ваш совет)</label>
                     </li>
                 </ul>
               </div>
@@ -93,17 +96,21 @@
               <div class="order-form__additional">
                 <h3 class="order-form__additional-head">Дополнительно</h3>
                 <ul class="order-form__additional-list">
-                  <li>
-                    <label><input type="checkbox" name="add" value="sweetener" checked>Сахарозаменитель</label>
+                  <li class="order-form__additional-item">
+                    <input class="order-form__additional-input" id="add-1" type="checkbox" name="add" value="sweetener" checked>
+                    <label for="add-1">Сахарозаменитель</label>
                   </li>
-                  <li>
-                    <label><input type="checkbox" name="add" value="water">Питьевая вода</label>
+                  <li class="order-form__additional-item">
+                    <input class="order-form__additional-input" id="add-2" type="checkbox" name="add" value="water">
+                    <label for="add-2">Питьевая вода</label>
                   </li>
-                  <li>
-                    <label><input type="checkbox" name="add" value="milk">Молоко</label>
+                  <li class="order-form__additional-item">
+                    <input class="order-form__additional-input" id="add-3" type="checkbox" name="add" value="milk">
+                    <label for="add-3">Молоко</label>
                   </li>
-                  <li>
-                    <label><input type="checkbox" name="add" value="vitamins">Витамины</label>
+                  <li class="order-form__additional-item">
+                    <input class="order-form__additional-input" id="add-4" type="checkbox" name="add" value="vitamins">
+                    <label for="add-4">Витамины</label>
                   </li>
                 </ul>
               </div>
@@ -117,12 +124,14 @@
         </div>
       </section>
 
-      <section class="partnership">
-        <div class="partnership__wrapper">
-            <h2 class="partnership__head">Приглашаем <br>к сотрудничеству дилеров!</h2>
-            <address class="partnership__adress">ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург</address>
+      <section class="partnership partnership--grey">
+        <div class="partnership__desktop-wrapper">
+          <div class="partnership__wrapper">
+              <h2 class="partnership__head">Приглашаем <br>к сотрудничеству дилеров!</h2>
+              <address class="partnership__adress">ул. Большая
+                Конюшенная, д. 19/8
+                Санкт-Петербург</address>
+          </div>
         </div>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae52d17c07586e1c40c379d06efddfe7b84391496b3c8b74c21715c545acb77e3&amp;width=100%25&amp;height=362&amp;lang=ru_RU&amp;scroll=true"></script>
       </section>
@@ -132,8 +141,8 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="logo">
-            <img src="img/logo-footer.svg" class="logo__footer" alt="logo-footer" width="128" height="24">
+          <a class="logo" href="index.html">
+            <img src="img/logo-footer.svg" class="logo__footer logo__footer--hover logo__footer--pressed" alt="logo-footer" width="128" height="24">
           </a>
         </div>
         <ul class="page-footer__social-buttons social-buttons">
@@ -149,10 +158,10 @@
         </ul>
         <ul class="page-footer__copyright copyright">
           <li class="copyright__text">
-            <a class="copyright__link" href="#">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
           <li>
-            <a class="copyright__logo" href="#"></a>
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
           </li>
         </ul>
       </div>
