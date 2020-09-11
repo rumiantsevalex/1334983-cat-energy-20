@@ -77,7 +77,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../img/1.png");
+        background-image: url("../img/discription-1.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -92,7 +92,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../img/2.png");
+        background-image: url("../img/discription-2.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -107,7 +107,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../img/3.png");
+        background-image: url("../img/discription-3.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -122,7 +122,7 @@
         position: absolute;
         display: block;
         content: "";
-        background-image: url("../img/4.png");
+        background-image: url("../img/discription-4.png");
         background-repeat: no-repeat;
         width: 112px;
         height: 280px;
@@ -137,23 +137,43 @@
 .discription__leaf {
   &::before {
     background-image: url("../img/advantage-leaf@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+      background-size: cover;
+    }
   }
 }
 
 .discription__powder {
   &::before {
     background-image: url("../img/advantage-powder@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+      background-size: cover;
+    }
   }
 }
 
 .discription__dining {
   &::before {
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+      background-size: cover;
+    }
   }
 }
 
 .discription__clock {
   &::before {
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+      background-size: cover;
+    }
   }
 }

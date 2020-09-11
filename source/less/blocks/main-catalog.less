@@ -61,38 +61,60 @@
   }
 }
 
-.main-catalog__cat-stand {
+.main-catalog__cat-slim {
   &::after {
     display: block;
     content: "";
     position: absolute;
+    background-color: var(--basic-green);
+    border-radius: 50%;
 
     @media @mobile-width-only {
-      background-image: url("../img/cat_back-stand-mobile.png");
-      background-repeat: no-repeat;
       width: 50px;
-      height: 53px;
+      height: 50px;
       top: -10px;
       left: -70px;
     }
 
     @media @tablet-width {
-      background-image: url("../img/cat_back-stand-tablet.png");
-      background-repeat: no-repeat;
       width: 200px;
-      height: 211px;
+      height: 200px;
       top: -10px;
       left: 400px;
     }
 
     @media @desktop-width {
-      background-image: url("../img/cat_back-stand-tablet.png");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 100px;
-      height: 106px;
+      height: 100px;
       top: -40px;
       left: -170px;
+    }
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 50px;
+    top: -15px;
+    left: -65px;
+    z-index: 50;
+
+    @media @tablet-width {
+      width: 140px;
+      height: 192px;
+      top: -15px;
+      left: 430px;
+    }
+
+    @media @desktop-width {
+      width: 100px;
+      height: 100px;
+      top: -50px;
+      left: -160px;
     }
   }
 }
@@ -102,33 +124,55 @@
     display: block;
     content: "";
     position: absolute;
+    background-color: var(--basic-green);
+    border-radius: 50%;
 
     @media @mobile-width-only {
-      background-image: url("../img/cat_back-walk-mobile.png");
-      background-repeat: no-repeat;
-      width: 67px;
+      width: 50px;
       height: 50px;
       top: -10px;
-      left: -80px;
+      left: -70px;
     }
 
     @media @tablet-width {
-      background-image: url("../img/cat_back-walk-tablet.png");
-      background-repeat: no-repeat;
-      width: 268px;
+      width: 200px;
       height: 200px;
       top: -10px;
-      left: 365px;
+      left: 400px;
     }
 
     @media @desktop-width {
-      background-image: url("../img/cat_back-walk-tablet.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 134px;
+      width: 100px;
       height: 100px;
       top: -40px;
-      left: -180px;
+      left: -170px;
+    }
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 28px;
+    top: 0;
+    left: -80px;
+    z-index: 50;
+
+    @media @tablet-width {
+      width: 268px;
+      height: 112px;
+      top: 30px;
+      left: 360px;
+    }
+
+    @media @desktop-width {
+      width: 134px;
+      height: 56px;
+      top: -20px;
+      left: -190px;
     }
   }
 }

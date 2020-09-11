@@ -26,6 +26,15 @@
     margin-top: 22px;
     margin-bottom: 24px;
 
+    @media @mobile-width-only {
+      width: 100%;
+      border-bottom: 1px solid var(--basic-border-grey);
+      text-align: center;
+      height: 66px;
+      margin: 0;
+      padding-top: 22px;
+    }
+
     @media @tablet-width {
       margin-left: 35px;
     }
@@ -34,7 +43,6 @@
   @media @mobile-width-only {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   @media @tablet-width {
@@ -59,7 +67,9 @@
 }
 
 .site-list__link--active {
-  border-bottom: 2px var(--basic-green) solid;
+  @media @tablet-width {
+    border-bottom: 2px var(--basic-green) solid;
+  }
 }
 
 .site-list__link--white {
