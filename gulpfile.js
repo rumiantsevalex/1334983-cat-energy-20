@@ -11,6 +11,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const posthtml = require('posthtml');
+const include = require('include');
+const { readFileSync } = require('fs');
 
 // Styles
 
@@ -91,6 +94,11 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// Html-include
+
+const html = () => {
+  
+}
 
 // Copy
 
