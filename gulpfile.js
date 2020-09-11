@@ -126,7 +126,6 @@ exports.copy = copy;
 const clean = () => {
   return del("build");
 };
-
 exports.clean = clean;
 
 // Build
