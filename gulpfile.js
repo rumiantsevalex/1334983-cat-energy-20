@@ -11,9 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const posthtml = require('posthtml');
-const include = require('include');
-const { readFileSync } = require('fs');
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 
 // Styles
 
@@ -39,7 +38,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -54,7 +53,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html"));
 }
 
 exports.default = gulp.series(
@@ -70,8 +69,8 @@ const images = () => {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
   ]))
- }
- exports.images = images;
+}
+exports.images = images;
 
 // Webp
 
@@ -97,8 +96,14 @@ exports.sprite = sprite;
 // Html-include
 
 const html = () => {
-  
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 }
+
+exports.html = html;
 
 // Copy
 
@@ -116,7 +121,7 @@ const copy = () => {
 
 exports.copy = copy;
 
-// Del
+// Clean
 
 const clean = () => {
   return del("build");
@@ -128,9 +133,11 @@ exports.clean = clean;
 
 const build = gulp.series(
   "clean",
+  "images",
   "copy",
   "styles",
   "sprite",
- );
+  "html"
+);
 
- exports.build = build;
+exports.build = build;
