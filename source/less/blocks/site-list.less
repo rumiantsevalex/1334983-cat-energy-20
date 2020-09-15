@@ -8,12 +8,14 @@
     text-transform: uppercase;
     font-size: 20px;
     line-height: 20px;
-    font-weight: bold;
+    font-weight: 500;
 
     @media @tablet-width {
+      display: inline-block;
       font-weight: normal;
       font-size: 18px;
       line-height: 24px;
+      height: 30px;
     }
 
     @media @desktop-width {
@@ -25,6 +27,17 @@
   li {
     margin-top: 22px;
     margin-bottom: 24px;
+
+    &:first-child {
+      @media @mobile-width-only {
+        width: 100%;
+        border-top: 1px solid var(--basic-border-grey);
+        text-align: center;
+        height: 66px;
+        margin: 0;
+        padding-top: 22px;
+      }
+    }
 
     @media @mobile-width-only {
       width: 100%;

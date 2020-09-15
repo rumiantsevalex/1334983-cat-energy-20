@@ -2,6 +2,13 @@
   .base-wrapper;
 
   @media @desktop-width {
-    margin-bottom: -100px;
+    margin: 0;
+    max-width: none;
+    background: linear-gradient(to right, white 50%, var(--basic-green-2) 50%);
+    z-index: 3;
+  }
+
+  @media @desktop-width {
+    background: none;
   }
 }

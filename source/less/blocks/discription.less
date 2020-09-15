@@ -1,5 +1,6 @@
 .discription {
   .base-wrapper;
+  padding-bottom: 20px;
 }
 
 .discription__wrapper {
@@ -10,6 +11,17 @@
   font-size: 36px;
   line-height: 40px;
   .oswald;
+  margin-bottom: 38px;
+
+  @media @tablet-width {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media @desktop-width {
+    margin-top: 42px;
+    margin-left: 2px;
+  }
 }
 
 .discription__list {
@@ -17,20 +29,33 @@
 
   @media @tablet-width {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 250px 250px;
+    column-gap: 135px;
+    row-gap: 35px;
+    height: 600px;
   }
 
   @media @desktop-width {
     display: flex;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
   }
 }
 
 .discription__item {
+  margin-bottom: 20px;
+
   @media @tablet-width {
     width: 315px;
     min-height: 335px;
-    padding-top: 150px;
+    margin-bottom: 0;
+  }
+
+  @media @desktop-width {
+    width: 190px;
+    min-height: auto;
   }
 }
 
@@ -47,7 +72,9 @@
     margin-left: 0;
     font-size: 16px;
     line-height: 24px;
-    width: 225px;
+    width: 245px;
+    margin-top: 145px;
+    margin-bottom: 0;
   }
 
   &::before {
@@ -65,7 +92,7 @@
       width: 80px;
       height: 80px;
       left: 0;
-      top: -120px;
+      top: -110px;
     }
   }
 }

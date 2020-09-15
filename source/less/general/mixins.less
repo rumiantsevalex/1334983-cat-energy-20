@@ -95,25 +95,39 @@
   &::before,
   &::after {
     content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
+    display: block;
+    position: absolute;
+    width: 100vw;
     height: 2px;
     background-color: var(--basic-green);
-    border: solid #ffffff;
-    border-width: 0 40px;
+    z-index: -1;
+
+    @media @mobile-width-only {
+      top: 15px;
+    }
+
+    @media @tablet-width {
+      top: 22px;
+    }
   }
 
   &::before {
-    margin-left: -100%;
+    left: 100%;
 
-    @media @mobile-width-only {
-      display: none;
+    @media @desktop-width {
+      left: 110%;
     }
   }
 
   &::after {
-    margin-right: -150%;
-    width: 150%;
+    right: 100%;
+
+    @media @mobile-width-only {
+      display: none;
+    }
+
+    @media @desktop-width {
+      right: 110%;
+    }
   }
 }
