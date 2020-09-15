@@ -14,6 +14,78 @@
     min-height: auto;
     border: none;
   }
+
+  &__only-before {
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+
+      @media @mobile-width-only {
+        background-image: url("../img/before-mobile@1x.png");
+        width: 311px;
+        height: 232px;
+        top: 35px;
+        background-size: cover;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/before-mobile@2x.png");
+          background-size: contain;
+        }
+      }
+
+      @media @tablet-width {
+        background-image: url("../img/before-half-desktop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 354px;
+        height: 620px;
+        top: -250px;
+        left: -65px;
+      }
+
+      @media @desktop-width {
+        left: -95px;
+        top: -265px;
+      }
+    }
+  }
+
+  &__only-after {
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+
+      @media @mobile-width-only {
+        background-image: url("../img/after-mobile@1x.png");
+        width: 311px;
+        height: 232px;
+        top: 20px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/after-mobile@2x.png");
+          background-size: contain;
+        }
+        .visually-hidden;
+      }
+
+      @media @tablet-width {
+        background-image: url("../img/after-half-desktop.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 354px;
+        height: 620px;
+        top: -240px;
+        left: 285px;
+      }
+
+      @media @desktop-width {
+        top: -265px;
+        left: 260px;
+      }
+    }
+  }
 }
 
 .example__base-wrapper {
@@ -235,12 +307,6 @@
       transform: translateX(-10px);
     }
   }
-
-  &--number {
-    @media @desktop-width {
-
-    }
-  }
 }
 
 .example__before-after {
@@ -260,95 +326,6 @@
     width: 570px;
     margin: 0;
     margin-bottom: 200px;
-  }
-}
-
-.example {
-  &__only-before {
-    &::before {
-      position: absolute;
-      display: block;
-      content: "";
-
-      @media @mobile-width-only {
-        background-image: url("../img/before-mobile@1x.png");
-        width: 311px;
-        height: 232px;
-        top: 35px;
-        background-size: cover;
-
-        @media (min-resolution: 2dppx) {
-          background-image: url("../img/before-mobile@2x.png");
-          background-size: contain;
-        }
-      }
-
-      @media @tablet-width {
-        background-image: url("../img/before-half-desktop.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 354px;
-        height: 620px;
-        top: -250px;
-        left: -65px;
-      }
-
-      @media @desktop-width {
-        left: -95px;
-        top: -265px;
-      }
-    }
-  }
-
-  &__only-after {
-    &::after {
-      position: absolute;
-      display: block;
-      content: "";
-
-      @media @mobile-width-only {
-        background-image: url("../img/after-mobile@1x.png");
-        width: 311px;
-        height: 232px;
-        top: 20px;
-
-        @media (min-resolution: 2dppx) {
-          background-image: url("../img/after-mobile@2x.png");
-          background-size: contain;
-        }
-        .visually-hidden;
-      }
-
-      @media @tablet-width {
-        background-image: url("../img/after-half-desktop.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 354px;
-        height: 620px;
-        top: -240px;
-        left: 285px;
-      }
-
-      @media @desktop-width {
-        top: -265px;
-        left: 260px;
-      }
-
-      /*@media @desktop-width {
-        background-image: url("../img/after-desktop@1x.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 708px;
-        height: 620px;
-        top: -450px;
-        left: 0;
-
-        @media (min-resolution: 2dppx) {
-          background-image: url("../img/after-desktop@2x.png");
-          background-size: contain;
-        }
-      }*/
-    }
   }
 }
 

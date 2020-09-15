@@ -1,16 +1,14 @@
 .product-catalog {
   .base-wrapper;
+
+  @media @desktop-width {
+    margin-top: -5px;
+  }
 }
 
 .product-catalog__wrapper {
   @media @tablet-width {
     .main-wrapper;
-  }
-}
-
-.product-catalog__item-image--big {
-  @media @tablet-width {
-    margin-top: -20px;
   }
 }
 
@@ -102,6 +100,7 @@
 
   &big {
     @media @tablet-width {
+      margin-top: -20px;
       max-width: 150%;
       margin-left: -40px;
     }
