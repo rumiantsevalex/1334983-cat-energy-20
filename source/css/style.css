@@ -2514,6 +2514,7 @@ img {
   content: "";
   position: absolute;
   background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   left: -45px;
