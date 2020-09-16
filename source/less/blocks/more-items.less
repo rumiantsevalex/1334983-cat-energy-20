@@ -4,7 +4,11 @@
   flex-direction: column;
 
   @media @mobile-width-only {
+    .main-wrapper;
     justify-content: flex-end;
+    border-bottom: 1px var(--basic-border-grey) solid;
+    padding-bottom: 25px;
+    margin-top: 54px;
   }
 }
 
@@ -35,6 +39,7 @@
     line-height: 22px;
     width: 134px;
     font-weight: normal;
+    transform: translateY(10px);
   }
 
   &::before {
@@ -44,7 +49,7 @@
     background-image: url("../img/icon-plus-mobile.svg");
     width: 30px;
     height: 30px;
-    top: -40px;
+    top: -54px;
     left: 45%;
 
     @media @tablet-width {
@@ -69,6 +74,7 @@
     width: 167px;
     font-size: 16px;
     line-height: 18px;
+    margin-bottom: 65px;
   }
 }
 
@@ -76,9 +82,15 @@
   .base-button;
   background-color: var(--basic-grey);
   color: var(--basic-grey-font);
+  font-size: 16px;
 
   @media @tablet-width {
-    margin-bottom: 32px;
+    margin-bottom: 25px;
+    width: 80%;
+  }
+
+  @media @desktop-width {
+    width: 169px;
   }
 }
 

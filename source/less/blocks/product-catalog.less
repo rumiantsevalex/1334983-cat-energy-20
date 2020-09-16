@@ -1,23 +1,35 @@
 .product-catalog {
   .base-wrapper;
+
+  @media @desktop-width {
+    margin-top: -5px;
+  }
 }
 
 .product-catalog__wrapper {
-  .main-wrapper;
+  @media @tablet-width {
+    .main-wrapper;
+  }
 }
 
 .product-catalog__head {
   .oswald;
   font-size: 36px;
   line-height: 36px;
+  .main-wrapper;
+  margin-top: 28px;
+  margin-bottom: 41px;
 
   @media @tablet-width {
     font-size: 60px;
     line-height: 60px;
+    padding-left: 0;
+    margin-top: 42px;
+    margin-bottom: 85px;
   }
 
   @media @desktop-width {
-    margin-top: 100px;
+    margin-top: 62px;
   }
 }
 
@@ -40,7 +52,19 @@
   }
 }
 
+.product-catalog__item:first-child {
+  @media @mobile-width-only {
+    border-top: 1px var(--basic-border-grey) solid;
+  }
+}
+
 .product-catalog__item {
+  @media @mobile-width-only {
+    border-bottom: 1px var(--basic-border-grey) solid;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   @media @tablet-width {
     display: flex;
     flex-direction: column;
@@ -62,15 +86,33 @@
     min-height: 391px;
     align-items: center;
     justify-content: space-between;
+    margin-top: 25px;
+  }
+}
+
+.product-catalog__item-image-- {
+  &small {
+    @media @tablet-width {
+      max-width: 150%;
+      margin-left: -35px;
+    }
+  }
+
+  &big {
+    @media @tablet-width {
+      margin-top: -20px;
+      max-width: 150%;
+      margin-left: -40px;
+    }
   }
 }
 
 .product-catalog__name-and-stats {
   @media @tablet-width {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 25px;
   }
 }
 
@@ -81,6 +123,9 @@
   text-transform: uppercase;
   .oswald;
   width: 76px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 10px;
 
   @media @tablet-width {
     font-size: 20px;
@@ -89,6 +134,8 @@
     text-align: center;
     font-style: normal;
     font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 18px;
   }
 }
 
@@ -96,7 +143,7 @@
   color: var(--basic-grey-font);
   .arial;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 15px;
 
   @media @tablet-width {
     width: 100%;
@@ -111,13 +158,29 @@
   width: 140px;
 
   @media @tablet-width {
-    margin-right: -10px;
-    width: 251px;
-    margin-bottom: 14px;
+    width: 248px;
+    border-bottom: 1px var(--basic-border-grey) solid;
+    padding-bottom: 5px;
+    margin-top: 5px;
+  }
+
+
+  @media @desktop-width {
+    width: 180px;
   }
 }
 
 .product-catalog__order-button {
   .base-button;
-  margin-bottom: 41px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  margin-top: -1px;
+
+  @media @tablet-width {
+    margin-bottom: 35px;
+  }
+
+  @media @desktop-width {
+    width: 168px;
+  }
 }

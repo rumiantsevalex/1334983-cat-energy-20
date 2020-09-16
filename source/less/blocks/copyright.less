@@ -2,6 +2,8 @@
   .ul-base-style;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
 
   @media @tablet-width {
     width: 164px;
@@ -13,13 +15,32 @@
   color: var(--basic-grey-font);
   font-style: normal;
   text-decoration: none;
+
+  &:active {
+    opacity: 30%;
+  }
 }
 
+.copyright__text {
+  padding-top: 3px;
+}
 
 .copyright__logo {
   display: block;
   width: 27px;
   height: 34px;
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
+}
+
+.copyright__svg-logo {
+  width: 45px;
+  fill: var(--basic-svg-grey);
+
+  &:hover {
+    fill: var(--basic-green);
+  }
+
+  &:active {
+    fill: var(--basic-green);
+    opacity: 30%;
+  }
 }
